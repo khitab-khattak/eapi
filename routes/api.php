@@ -11,3 +11,8 @@ Route::get('/test', function () {
 
 // Route for storing user
 Route::post('user/store', [UserController::class, 'store']);
+Route::get('users/get/{flag}', [UserController::class,'index']);
+Route::get('user/{id}', [UserController::class,'show']);
+Route::delete('user/{id}', [UserController::class,'destroy']);
+Route::get('user/update/{id}', [UserController::class,'update']);
+Route::get('user/change-password/{id}', [UserController::class, 'changePassword']);
